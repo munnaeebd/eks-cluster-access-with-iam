@@ -18,7 +18,7 @@ data:
       rolearn: arn:aws:iam::Account-ID:role/uat-munna-rnd-worker
       username: system:node:{{EC2PrivateDNSName}}
     - groups:
-      - system:masters
+      - developers
       rolearn: arn:aws:iam::Account-ID:role/uat-munna-rnd-worker
       username: "role-developer"
 kind: ConfigMap
