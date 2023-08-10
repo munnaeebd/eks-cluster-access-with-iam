@@ -10,16 +10,16 @@ data:
       - system:bootstrappers
       - system:nodes
       - system:node-proxier
-      rolearn: arn:aws:iam::051725806636:role/eks-fargate-profile-example
+      rolearn: arn:aws:iam::Account-ID:role/eks-fargate-profile-example
       username: system:node:{{SessionName}}
     - groups:
       - system:bootstrappers
       - system:nodes
-      rolearn: arn:aws:iam::051725806636:role/uat-munna-rnd-worker
+      rolearn: arn:aws:iam::Account-ID:role/uat-munna-rnd-worker
       username: system:node:{{EC2PrivateDNSName}}
     - groups:
       - system:masters
-      rolearn: arn:aws:iam::051725806636:role/uat-munna-rnd-worker
+      rolearn: arn:aws:iam::Account-ID:role/uat-munna-rnd-worker
       username: "role-developer"
 kind: ConfigMap
 metadata:
