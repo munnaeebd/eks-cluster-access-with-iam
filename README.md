@@ -1,7 +1,9 @@
 # eks-cluster-access-with-iam
 
 **Steps-1:** Launch a bastion host and assign a iam role (e.g. arn:aws:iam::Account-ID:role/uat-munna-rnd-worker)
+
 **Steps-2:** Login in to jenkins or eks creator host. Create a role/rolebinding with required permission (pod,deploymen,secret/get,create,delete etc)
+
 **Steps-3:** edit existing aws-auth configmap and add a new entry under mapRoles with groups name and role arn. if we set group as system:master then bastion host will get full access, if we set our created role/rolebinding (e.g. developers) then bastion host will get only specified permission. 
 
 
